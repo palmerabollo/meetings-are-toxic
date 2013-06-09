@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Meetings Are Toxic</title>
+
+    <!-- Shared styles (Firefox OS building blocks) -->
+    <link rel="stylesheet" type="text/css" href="shared/style/headers.css">
+    <link rel="stylesheet" type="text/css" href="shared/style/status.css">
+    <link rel="stylesheet" type="text/css" href="shared/style/input_areas.css">
+    <link rel="stylesheet" type="text/css" href="shared/style/buttons.css">
+    <link rel="stylesheet" type="text/css" href="shared/style/confirm.css">
+
+    <!-- Localization -->
+    <link rel="resource" type="application/l10n" href="locales/locales.ini">
+    <script type="application/javascript" src="shared/js/l10n.js"></script>
+
+    <!-- Specific styles -->
+    <link rel="stylesheet" type="text/css" href="style/template.css">
+
+    <!-- Specific code -->
+    <script type="application/javascript" src="js/howler.min.js"></script>
+    <script type="application/javascript" src="js/async_storage.js"></script>
+    <script defer type="application/javascript" src="js/template-ui.js"></script>
+  </head>
+
+  <body>
+    <section id="main-view" class="view" role="region" data-page-position="viewport">
+      <header>
+        <menu type="toolbar">
+          <a href="#" id="settings-open">
+            <span class="icon icon-settings" data-l10n-id="settings">
+              Settings
+            </span>
+          </a>
+        </menu>
+        <h1 data-l10n-id="app-title">Meetings Are Toxic</h1>
+      </header>
+
+      <section id="meeting">
+        <section>
+          <span class="current_minutes letterpress">00:00</span>
+        </section>
+
+        <section>
+          <span class="current_cost letterpress">0.00 EUR</span>
+        </section>
+
+        <section>
+          <button class="recommend" id="start">Start Meeting</button>
+        </section>
+
+        <section>
+          <span class="summary">
+          You spent <span class="total" id="total">0 minutes</span> so far in meetings.
+          </span>
+        </section>
+      </section>
+    </section>
+
+    <section id="settings-view" class="view" role="region" data-page-position="bottom">
+      <header>
+        <menu type="toolbar">
+          <a id="settings-done" data-l10n-id="done">Done</a>
+        </menu>
+        <h1 data-l10n-id="settings">Settings</h1>
+      </header>
+
+      <section>
+        <form>
+          <fieldset>
+            <legend>EUR/h</legend>
+            <section>
+              <p>
+                <input type="number" placeholder="eur/hour" disabled min="0" max="2000" value="60">
+                <button type="reset">Clear</button>
+              </p>
+            </section>
+          </fieldset>
+        </form>
+
+        <span class="summary" data-l10n-id="settings-warn">Not yet configurable</span>
+      </section>
+    </section>
+  </body>
+</html>

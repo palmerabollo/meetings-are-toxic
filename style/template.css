@@ -1,0 +1,105 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden !important;
+  font-size: 62.5% !important;
+}
+
+/*
+  WVGA => QHD
+  --
+  Supported devices:
+    * 480x800
+  --
+  UA default font size 16px.
+  62.5% = 10px (base device)
+  62.5% * 1.5 (dppx) = ~94% (93.75%)
+*/
+/*Portrait*/
+@media all and (min-device-width: 480px) and (max-device-width: 540px) and (max-device-aspect-ratio: 1/1) {
+  html { font-size: 94%!important; }
+}
+
+/*Landscape*/
+@media all and (min-device-width: 800px) and (max-device-width: 960px) and (min-device-aspect-ratio: 1/1) {
+  html { font-size: 94%!important; }
+}
+
+/*
+  QHD => HD
+  --
+  Supported devices:
+    * Geeksphone Peak: 540×960
+  --
+  UA default font size 16px.
+  100% = 16px
+  62.5% = 10px (base device)
+  62.5% * 1.6875 (dppx) = ~105% (105,46875%)
+*/
+
+/*Portrait*/
+@media all and (min-device-width: 540px) and (max-device-width: 720px) and (max-device-aspect-ratio: 1/1) {
+  html { font-size: 105%!important; }
+}
+
+/*Landscape*/
+@media all and (min-device-width: 960px) and (max-device-width: 1280px) and (min-device-aspect-ratio: 1/1) {
+  html { font-size: 105%!important; }
+}
+
+.view {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  transition: transform 0.3s ease;
+}
+
+.view[data-page-position = "viewport"] {
+  transform: translateX(0);
+}
+
+.view[data-page-position = "bottom"] {
+  transform: translateY(100%);
+}
+
+.view[data-page-position = "right"] {
+  transform: translateX(100%);
+}
+
+.view > section {
+  text-align: center;
+  width: 100%;
+  height: calc(100% - 5rem);
+}
+
+#meeting {
+  margin-top: 3rem;
+}
+
+section[role="region"] > header .icon.icon-settings {
+  background-image: url(icons/settings.png);
+}
+
+span.current_minutes {
+  font-size: 8rem;
+}
+
+span.current_cost {
+  font-size: 3rem;
+}
+
+.letterpress {
+  text-shadow: 0px 1px 1px #ccc;
+  color: #ddd;
+}
+
+.summary {
+  font-size: 1.5rem;
+  color: gray;
+}
+
+button {
+  margin-top: 1rem;
+  width: 70%;
+}

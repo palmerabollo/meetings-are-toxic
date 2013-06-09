@@ -1,0 +1,27 @@
+{
+  "name": "M.A.T",
+  "description": "Meetings Are Toxic",
+  "version": "0.3",
+  "type": "privileged",
+  "permissions": {
+    "storage": {
+      "description": "Allow user to keep historic usage"
+    }
+  },
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "Guido García",
+    "url": "http://guidogarcia.net"
+  },
+  "locales": {
+    "en-US": {
+      "name": "M.A.T",
+      "description": "Meetings Are Toxic. A simple toxicity meter."
+    }
+  },
+  "default_locale": "en-US",
+  "icons": {
+    "75": "/style/icons/main.png",
+    "128": "/style/icons/main_128.jpeg"
+  }
+}
