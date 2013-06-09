@@ -1,9 +1,13 @@
 Meetings Are Toxic
 ==================
 
-"Every minute you avoid spending in a meeting is a minute you can get real work done instead."
+**"Every minute you avoid spending in a meeting is a minute you can get real work done instead."**
 
-This is a Firefox OS application that serves as a simple toxicity meter.
+This is a Firefox OS application that serves as a simple toxicity meter. An image speaks a thousand words.
+
+![Meetings Are Toxic](https://raw.github.com/palmerabollo/meetings-are-toxic/master/style/icons/screenshot.png)
+
+Feel free to contribute to this project.
 
 License
 -------
