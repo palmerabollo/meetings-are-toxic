@@ -8,6 +8,7 @@
   var settingsView = document.querySelector('#settings-view'),
       settingsOpen = document.querySelector('#settings-open'),
       settingsDone = document.querySelector('#settings-done'),
+      settingsCost = document.querySelector('#settings-cost'),
       startButton = document.querySelector('#start'),
       alarmSound = new Howl({urls: ['res/alarm.wav']}),
       coinSound = new Howl({urls: ['res/coindrop.wav']}),
@@ -54,7 +55,7 @@
   };
 
   var incrementCost = function(sec) {
-    current_cost += sec * 60 / 3600; // 1 min = 1 eur (60 eur/h avg)
+    current_cost += sec * settingsCost.value / 3600; // 1 min = 1 eur (60 eur/h avg)
 
     var roundedCost = Math.floor(current_cost);
 
